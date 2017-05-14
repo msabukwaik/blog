@@ -12,10 +12,17 @@
 */
 
 Route::get('/', function () {
-    $lists = [
-        'Son',
-        'Wife',
-        'Brother'
-    ];
+    $lists = DB::table('tasks')->latest()->get();
     return view('welcome', compact('lists'));
+});
+
+Route::get('/tasks', function () {
+    $lists = DB::table('tasks')->latest()->get();
+    return view('tasks.index', compact('lists'));
+});
+
+
+Route::get('/tasks/{task}', function ($id) {
+    $task = DB::table('tasks')->find($id);
+    return view('tasks.show', compact('task'));
 });
