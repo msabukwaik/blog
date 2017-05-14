@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $lists = [
+        'Son',
+        'Wife',
+        'Brother'
+    ];
+    return view('welcome', compact('lists'));
 });
