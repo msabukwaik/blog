@@ -13,18 +13,8 @@ use App\Task;
 |
 */
 
-Route::get('/', function () {
-    $lists = Task::all();
-    return view('welcome', compact('lists'));
-});
+Route::get('/', 'TasksController@home');
 
-Route::get('/tasks', function () {
-    $lists = Task::all();
-    return view('tasks.index', compact('lists'));
-});
+Route::get('/tasks', 'TasksController@index');
 
-
-Route::get('/tasks/{task}', function ($id) {
-    $task = Task::find($id);
-    return view('tasks.show', compact('task'));
-});
+Route::get('/tasks/{task}', 'TasksController@show');
