@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6
+class ComposerStaticInitbbf96e16e0134cdbef6c3899ec13cd0e
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -2412,7 +2412,6 @@ class ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6
         'Psy\\CodeCleaner\\MagicConstantsPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/MagicConstantsPass.php',
         'Psy\\CodeCleaner\\NamespaceAwarePass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/NamespaceAwarePass.php',
         'Psy\\CodeCleaner\\NamespacePass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/NamespacePass.php',
-        'Psy\\CodeCleaner\\NoReturnValue' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/NoReturnValue.php',
         'Psy\\CodeCleaner\\PassableByReferencePass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/PassableByReferencePass.php',
         'Psy\\CodeCleaner\\StaticConstructorPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/StaticConstructorPass.php',
         'Psy\\CodeCleaner\\StrictTypesPass' => __DIR__ . '/..' . '/psy/psysh/src/Psy/CodeCleaner/StrictTypesPass.php',
@@ -2444,7 +2443,6 @@ class ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6
         'Psy\\Command\\PsyVersionCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/PsyVersionCommand.php',
         'Psy\\Command\\ReflectingCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/ReflectingCommand.php',
         'Psy\\Command\\ShowCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/ShowCommand.php',
-        'Psy\\Command\\SudoCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/SudoCommand.php',
         'Psy\\Command\\ThrowUpCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/ThrowUpCommand.php',
         'Psy\\Command\\TraceCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/TraceCommand.php',
         'Psy\\Command\\WhereamiCommand' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Command/WhereamiCommand.php',
@@ -2470,10 +2468,6 @@ class ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6
         'Psy\\Formatter\\DocblockFormatter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Formatter/DocblockFormatter.php',
         'Psy\\Formatter\\Formatter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Formatter/Formatter.php',
         'Psy\\Formatter\\SignatureFormatter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Formatter/SignatureFormatter.php',
-        'Psy\\Input\\CodeArgument' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Input/CodeArgument.php',
-        'Psy\\Input\\FilterOptions' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Input/FilterOptions.php',
-        'Psy\\Input\\ShellInput' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Input/ShellInput.php',
-        'Psy\\Input\\SilentInput' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Input/SilentInput.php',
         'Psy\\Output\\OutputPager' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Output/OutputPager.php',
         'Psy\\Output\\PassthruPager' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Output/PassthruPager.php',
         'Psy\\Output\\ProcOutputPager' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Output/ProcOutputPager.php',
@@ -2488,8 +2482,6 @@ class ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6
         'Psy\\Reflection\\ReflectionLanguageConstruct' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Reflection/ReflectionLanguageConstruct.php',
         'Psy\\Reflection\\ReflectionLanguageConstructParameter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Reflection/ReflectionLanguageConstructParameter.php',
         'Psy\\Shell' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Shell.php',
-        'Psy\\Sudo' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Sudo.php',
-        'Psy\\Sudo\\SudoVisitor' => __DIR__ . '/..' . '/psy/psysh/src/Psy/Sudo/SudoVisitor.php',
         'Psy\\TabCompletion\\AutoCompleter' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/AutoCompleter.php',
         'Psy\\TabCompletion\\Matcher\\AbstractContextAwareMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/AbstractContextAwareMatcher.php',
         'Psy\\TabCompletion\\Matcher\\AbstractMatcher' => __DIR__ . '/..' . '/psy/psysh/src/Psy/TabCompletion/Matcher/AbstractMatcher.php',
@@ -3237,10 +3229,10 @@ class ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitc000eb1c5fef029962e1d7a345dbced6::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbbf96e16e0134cdbef6c3899ec13cd0e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbbf96e16e0134cdbef6c3899ec13cd0e::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitbbf96e16e0134cdbef6c3899ec13cd0e::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitbbf96e16e0134cdbef6c3899ec13cd0e::$classMap;
 
         }, null, ClassLoader::class);
     }
