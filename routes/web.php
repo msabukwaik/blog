@@ -13,6 +13,8 @@ use App\Task;
 |
 */
 
+Route::resource('question', 'QuestionController');
+
 Route::get('/', 'PostController@index');
 
 Route::get('/posts', 'PostController@index');
