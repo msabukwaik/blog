@@ -1,3 +1,12 @@
+<?php
+
+//Call custom class
+$fooService = new \App\Mylibs\FooService();
+$fooService->sayHello();
+
+App()->make('FooService')->sayHello();
+
+?>
 <div class="navbar navbar-inverse bg-inverse">
     <div class="container d-flex justify-content-between">
         <a href="#" class="navbar-brand">Album</a>
