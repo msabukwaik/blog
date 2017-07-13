@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 class QuestionController extends Controller
 {
+
+	/**
+	 * PostController constructor.
+	 */
+	public function __construct() {
+		//$this->middleware('checkQuestion');
+		//$this->middleware('checkQuestion')->only('show');
+		//$this->middleware('checkQuestion')->except('show');
+	}
+
 	public function index(){ //question
 		return 'List of questions should be returned here';
 	}
