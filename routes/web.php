@@ -15,6 +15,10 @@ use App\Task;
 
 Route::resource('question', 'QuestionController');
 
+Route::resource('photo', 'PhotoController', ['only' => ['index']]);
+
+Route::resource('photo', 'PhotoController', ['except' => ['show', 'update']]);
+
 Route::get('/', 'PostController@index');
 
 Route::get('/posts', 'PostController@index');
