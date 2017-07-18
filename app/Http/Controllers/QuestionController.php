@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class QuestionController extends Controller
 {
@@ -17,6 +18,15 @@ class QuestionController extends Controller
 	}
 
 	public function index(){ //question
+		Log::emergency('emergency : 404 exceptopm is going to be raised');
+		Log::alert('alert : 404 exceptopm is going to be raised');
+		Log::critical('critical : 404 exceptopm is going to be raised');
+		Log::error('error : 404 exceptopm is going to be raised');
+		Log::warning('warning : 404 exceptopm is going to be raised');
+		Log::notice('notice : 404 exceptopm is going to be raised');
+		Log::info('info : 404 exceptopm is going to be raised');
+		Log::debug('debug : 404 exceptopm is going to be raised');
+		abort(404, 'Unauthorized action.');
 		return 'List of questions should be returned here';
 	}
 
