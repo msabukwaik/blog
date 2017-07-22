@@ -2,6 +2,10 @@
 
 @section('content')
 
+    @component('components.alert', ['message' => '<strong>Whooops !</strong> Something went wrong !'])
+
+    @endcomponent
+
     <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">My blog</h1>
