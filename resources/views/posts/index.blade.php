@@ -3,7 +3,7 @@
 @section('content')
 
     @component('components.alert', ['message' => '<strong>Whooops !</strong> Something went wrong !'])
-
+        <strong>Whooops !</strong> Something went wrong !
     @endcomponent
 
     <section class="jumbotron text-center">

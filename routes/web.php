@@ -32,3 +32,7 @@ Route::get('/tasks/{task}', 'TasksController@show');
 Route::get('/age/{age}', function(){
 
 })->middleware('checkAge');
+
+Route::get('welcome/{locale}', function($locale){
+	return view('components/welcome', ['locale'=>$locale]);
+});
