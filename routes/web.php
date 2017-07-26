@@ -36,3 +36,6 @@ Route::get('/age/{age}', function(){
 Route::get('welcome/{locale}', function($locale){
 	return view('components/welcome', ['locale'=>$locale]);
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
