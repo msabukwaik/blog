@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Task;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 
 class TasksController extends Controller
 {
@@ -13,6 +15,7 @@ class TasksController extends Controller
     }
 
     function show(Task $task) {
-        return view('tasks.show', compact('task'));
+	    $this->authorize('view',$task);
+	    return view('tasks.show', compact('task'));
     }
 }
