@@ -16,6 +16,12 @@ class TasksController extends Controller
 
     function show(Task $task) {
 	    $this->authorize('view',$task);
-	    return view('tasks.show', compact('task'));
+
+	    if (auth()->user()->can('view', Task::class)) {
+		    // Executes the "create" method on the relevant policy...
+		    return view('tasks.show', compact('task'));
+	    }
+
+	    return view('home', compact('task'));
     }
 }

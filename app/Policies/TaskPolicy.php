@@ -11,6 +11,10 @@ class TaskPolicy
 {
     use HandlesAuthorization;
 
+    public function before($user, $ability){
+    	return true;
+    }
+
     /**
      * Determine whether the user can view the task.
      *
