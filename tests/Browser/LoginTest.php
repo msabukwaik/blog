@@ -3,6 +3,8 @@
 namespace Tests\Browser;
 
 use App\User;
+use Illuminate\Support\Facades\DB;
+use Tests\Browser\Pages\LoginPage;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -14,18 +16,38 @@ class LoginTest extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testSignuUp()
     {
+    	$email = 'testuser123456@laravel.com';
+
+    	//Delete the tes user if exits
+	    DB::delete("delete from users where email = 'testuser123456@laravel.com'");
+	    DB::commit();
+
+	    //Create a test user for the testing purpose
 	    $user = factory(User::class)->create([
-		    'email' => 'taylor34445@laravel.com',
+		    'email' => $email,
 	    ]);
 
+	    //Test senario
 	    $this->browse(function ($browser) use ($user) {
-		    $browser->visit('/login')
+		    $browser->visit(new LoginPage)
+			        ->waitForLocation('/login')
 		            ->type('email', $user->email)
 		            ->type('password', 'secret')
 		            ->press('Login')
 		            ->assertPathIs('/home');
+	    });
+
+	    //Delete the testing user after the tesk taken place
+	    DB::delete("delete from users where email = '".$email."'");
+	    DB::commit();
+    }
+
+    public function testSignIn(){
+	    $this->browse(function ($first, $second) {
+		    $first->loginAs(User::find(1))
+		          ->visit('/home');
 	    });
     }
 }
